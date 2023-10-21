@@ -1,0 +1,26 @@
+<div class="table-resposive">
+    <table class="table table-bordered text-warning text-center"*ngIf=" stdarray.length  >0;else todo">
+        <thead>
+            <tr>
+                <th>sr no</th>
+                <th>fname</th>
+                <th>lname</th>
+                <th>email</th>
+                <th>contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let std of stdarray ;index as i">
+              <td>{{i+1}}</td>
+              <td>{{std.fname}}</td>
+              <td>{{std.lname}}</td>
+              <td>{{std.email}}</td>
+              <td>{{std.contact}}</td>
+            </tr>
+        </tbody>
+    </table>
+<ng-template #todo>
+<p class="alert alert-info">no added student data</p>
+</ng-template>
+ 
+</div>

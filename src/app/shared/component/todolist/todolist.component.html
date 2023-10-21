@@ -1,0 +1,10 @@
+
+    <ul class="list-group mb-4 todolit" *ngIf="todosarray.length > 0;else todo">
+        <li class="list-group-item mb-3 colorname" *ngFor="let todo of todosarray">
+           {{todo.todoitem}}
+        </li>
+    </ul>
+    <ng-template #todo>
+   <p class="alert alert-success text-dark">no add todolist</p>
+    </ng-template>
+

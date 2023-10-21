@@ -1,0 +1,24 @@
+
+
+
+<form [formGroup]="studentform" (ngSubmit)="onaddstd()" class="text-warning">
+    <div class="form-group">
+        <label for="fname">fname</label>
+        <input type="text"  formControlName="fname" class="form-control" id="fname">
+    </div>
+    <div class="form-group">
+        <label for="lname">lname</label>
+        <input type="text"  formControlName="lname" class="form-control" id="lname">
+    </div>
+    <div class="form-group">
+        <label for="email">email</label>
+        <input type="text"  formControlName="email" class="form-control" id="email">
+    </div>
+    <div class="form-group">
+        <label for="contact">contact</label>
+        <input type="text"  formControlName="contact" class="form-control" id="contact">
+    </div>
+    <div class="text-right">
+        <button class="btn btn-warning mb-3" [disabled]="studentform.invalid" type="submit">Addstdinfo</button>
+    </div>
+</form>
